@@ -4,95 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>С Днем Рождения!</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffebcd;
-            text-align: center;
-            padding: 50px;
-            overflow: hidden;
-            transition: background-color 0.5s;
-        }
-        h1 {
-            color: #ff6347;
-            font-size: 3em;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-        .message {
-            font-size: 1.5em;
-            margin: 20px 0;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease;
-        }
-        .balloons {
-            width: 100px;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-30px); }
-            100% { transform: translateY(0); }
-        }
-        footer {
-            margin-top: 50px;
-            font-size: 1.2em;
-            color: #555;
-        }
-        .button {
-            padding: 10px 20px;
-            font-size: 1.2em;
-            color: white;
-            background-color: #ff6347;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="/Tonya's-supris/main.css">
 </head>
 <body>
 
     <h1>С Днем Рождения!</h1>
-    <div class="message" id="message1">Дорогой [Имя]!</div>
+    <div class="message" id="message1">Дорогaя Тоня!</div>
     <div class="message" id="message2">Поздравляем тебя с этим замечательным днем!</div>
-    <div class="message" id="message3">Желаем счастья, здоровья и много радости!</div>
+    <div class="message" id="message3">Желаю деняг , щастья , хорошего настроения!</div>
+    <div class="image-container left">
+        <img src="/Tonya's-supris/img/773c2a02cc062abad3534ac68c17ce15.gif" alt="фото1" width="300">
+    </div>
+    <div class="image-container right">
+        <img src="/Tonya's-supris/img/7901e97640175785b612d69af55f9bc1.gif" alt="Фото 2" width="300">
+    </div>
 
-    <img src="https://example.com/balloons.png" alt="Шары" class="balloons">
+    <img src="/Tonya's-supris/img/R.png" alt="Шары" class="balloons">
 
-    <button class="button" id="playMusic">Включить музыку</button>
+    <button class="button" id="startButton">Включить музыку</button>
     <button class="button" id="changeColor">Сменить цвет фона</button>
 
     <footer>
-        <p>С любовью, [Ваше имя]</p>
+        <p>С любовью, Глеб</p>
     </footer>
 
-    <audio id="birthdaySong" src="https://example.com/birthday-song.mp3"></audio>
+    <audio id="birthdaySong" src="/Tonya's-supris/musik/ebat kakaya zhe huinya.mp3"></audio>
 
-    <script>
-        window.onload = function() {
-            let messages = document.querySelectorAll('.message');
-            messages.forEach((msg, index) => {
-                setTimeout(() => {
-                    msg.style.opacity = 1;
-                    msg.style.transform = 'translateY(0)';
-                }, index * 1000); // Каждое сообщение появляется через 1 секунду
-            });
-        };
+    <script src="/Tonya's-supris/main.js"> 
 
-        document.getElementById('playMusic').onclick = function() {
-            const audio = document.getElementById('birthdaySong');
-            audio.play();
-        };
-
-        document.getElementById('changeColor').onclick = function() {
-            const colors = ['#ffebcd', '#ffe4e1', '#e6e6fa', '#add8e6', '#ffdab9'];
-            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        };
+ 
     </script>
 
 </body>
