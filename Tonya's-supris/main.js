@@ -58,3 +58,11 @@ document.getElementById('startButton').addEventListener('click', () => {
         index = (index + 1) % colors.length;
     }, 1000); // Интервал смены цвета 1 секунда
 });
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4QC53TYQY');
