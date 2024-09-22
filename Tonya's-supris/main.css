@@ -76,3 +76,33 @@ footer {
         transform: translateX(0);
     }
 }
+
+#confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.confetti {
+    position: absolute;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.square {
+    /* Квадрат — просто блок */
+}
+
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(720deg); /* Увеличенное вращение */
+    }
+}
